@@ -1,0 +1,12 @@
+La web está dividida en cuatro documentos: index.html, aficiones.html, libros.html y videojuegos.html
+que se corresponden con la página principal de la web, mis aficiones, libros leídos y videojuegos
+jugados respectivamente.
+
+Se ha decidido usar un css para el estilo y el layout, separado por comentarios. Los módulos
+utilizados han sido:
+ - CSS Grid para el body de la página y los article
+ - CSS Flexbox layout para el header de la página
+
+Las únicas advertencias que se han dejado son 6 de color de fondo y primer plano de CSS ya que,
+aunque algunos elementos cambian una de las dos propiedades pero heredan la otra de sus componentes
+padre. Se han añadido comentarios en el CSS para indicar qué color heredan y de quién.

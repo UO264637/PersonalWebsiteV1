@@ -1,0 +1,185 @@
+/* Especificidad 1 */
+body {
+    background-color: #36393F;
+    color: aliceblue;
+    text-align: justify;
+    font-family: ui-sans-serif,system-ui;
+    margin: 0%;
+    min-height: 100vh;
+
+    /* Layout */
+    display: grid;
+    grid-template-columns: 1fr 3fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer  footer  footer"
+}
+
+/* Especificidad 1 */
+header {
+    /* Hereda color blanco de body */
+    background-color: #007272;
+    margin: 0%;
+    padding: 0.5vh;
+
+    /* Layout */
+    grid-area: header;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Especificidad 1 */
+nav {
+    padding: 2vh;
+}
+
+/* Especificidad 2 */
+nav a {
+    /* Hereda background-color cyan oscuro de header */
+    color: aliceblue;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-right: 1vw;
+    text-decoration: none;
+}
+
+/* Especificidad 1 */
+main {
+    max-width: 60vw;
+
+    grid-area: main;
+}
+
+/* Especificidad 1 */
+aside {
+    padding: 3vw;
+    text-align: right;
+
+    grid-area: aside;
+}
+
+/* Especificidad 1 */
+h1 {
+    font-size: 4.5vh;
+    margin-left: 2vh;
+    margin-top: 0%;
+    margin-bottom: 0.5vh;
+}
+
+/* Especificidad 1 */
+h2 {
+    font-size: 3vh;
+    margin-top: 1vh;
+}
+
+/* Especificidad 1 */
+section, article {
+    /* Hereda color blanco de body */
+    background-color: #2F3136;
+    padding-top: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
+}
+
+/* Especificidad 1 */
+section {
+    margin-top: 3vw;
+}
+
+/* Especificidad 1 */
+article {
+    margin-bottom: 2vh;
+
+    /* Layout */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas:
+    "title title"
+    "picture details"
+    "picture info"
+    "title2 title2"
+    "audio audio"
+}
+
+/* Especificidad 2 */
+article img{
+    grid-area: picture;
+}
+
+/* Especificidad 2 */
+article video{
+    grid-area: picture;
+}
+
+/* Especificidad 2 */
+article ul{
+    grid-area: details;
+}
+
+/* Especificidad 2 */
+article p{
+    margin-left: 1.5vw;
+    grid-area: info;
+}
+
+/* Especificidad 2 */
+article h3{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    grid-area: title;
+}
+
+/* Especificidad 2 */
+article h4 {
+    grid-area: title2;
+}
+
+/* Especificidad 2 */
+article audio {
+    grid-area: audio;
+}
+
+/* Especificidad 12 */
+main a:link {
+    /* Hereda background-color gris oscuro de body */
+    color: #00cccc;
+}
+
+/* Especificidad 12 */
+main a:visited {
+    /* Hereda background-color gris oscuro de body */
+    color: #009999;
+}
+
+/* Especificidad 1 */
+footer {
+    color: #a1a3aa;
+    background-color: #40444B;
+    font-size: 1.6vh;
+    text-align: center;
+    padding: 1vh;
+
+    /* Layout */
+    grid-area: footer;
+}
+
+/* Especificidad 2 */
+footer p {
+    margin: 0%;
+}
+
+/* Especificidad 1 */
+img {
+    max-width: 15vw;
+    height: auto;
+}
+
+
+
+
